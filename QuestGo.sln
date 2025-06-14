@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestGo.Api", "QuestGo\QuestGo.Api.csproj", "{7BB31D2B-7C45-40DD-A65D-901D16EAD76F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestGo.Data", "QuestGo.Data\QuestGo.Data.csproj", "{7AE543E0-5721-4041-8B1C-DEB277FBB2E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestGo.Domain", "QuestGo.Domain\QuestGo.Domain.csproj", "{3378E4DF-21C6-446E-AF54-BBF4A0BA2475}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestGo.Services", "QuestGo.Services\QuestGo.Services.csproj", "{B9680B62-DDE5-412C-9B18-62241FC34846}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BB31D2B-7C45-40DD-A65D-901D16EAD76F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BB31D2B-7C45-40DD-A65D-901D16EAD76F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BB31D2B-7C45-40DD-A65D-901D16EAD76F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BB31D2B-7C45-40DD-A65D-901D16EAD76F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AE543E0-5721-4041-8B1C-DEB277FBB2E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AE543E0-5721-4041-8B1C-DEB277FBB2E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AE543E0-5721-4041-8B1C-DEB277FBB2E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AE543E0-5721-4041-8B1C-DEB277FBB2E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3378E4DF-21C6-446E-AF54-BBF4A0BA2475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3378E4DF-21C6-446E-AF54-BBF4A0BA2475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3378E4DF-21C6-446E-AF54-BBF4A0BA2475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3378E4DF-21C6-446E-AF54-BBF4A0BA2475}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9680B62-DDE5-412C-9B18-62241FC34846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9680B62-DDE5-412C-9B18-62241FC34846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9680B62-DDE5-412C-9B18-62241FC34846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9680B62-DDE5-412C-9B18-62241FC34846}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6B0768A-EF87-46B0-A476-B2B70042F9A9}
+	EndGlobalSection
+EndGlobal
