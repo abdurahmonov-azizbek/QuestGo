@@ -6,9 +6,10 @@ namespace QuestGo.Data.Implementations;
 
 public class UnitOfWork(AppDbContext context) : IUnitOfWork
 {
-    public IRepository<User> Users { get; } = new Repository<User>(context);
-    public IRepository<Category> Categories { get; } = new Repository<Category>(context);
-    public IRepository<Test> Tests { get; } = new Repository<Test>(context);
+    public IRepository<User> Users => new Repository<User>(context);
+    public IRepository<Category> Categories => new Repository<Category>(context);
+    public IRepository<Test> Tests => new Repository<Test>(context);
+    public IRepository<Question> Questions => new Repository<Question>(context);
 
 
     public void Dispose()

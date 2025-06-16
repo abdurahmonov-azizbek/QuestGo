@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36203.30 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestGo.Api", "QuestGo\QuestGo.Api.csproj", "{7BB31D2B-7C45-40DD-A65D-901D16EAD76F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestGo.Api", "QuestGo.Api\QuestGo.Api.csproj", "{7BB31D2B-7C45-40DD-A65D-901D16EAD76F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestGo.Data", "QuestGo.Data\QuestGo.Data.csproj", "{7AE543E0-5721-4041-8B1C-DEB277FBB2E5}"
 EndProject

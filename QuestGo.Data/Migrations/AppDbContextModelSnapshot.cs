@@ -48,6 +48,42 @@ namespace QuestGo.Data.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("QuestGo.Domain.Entities.Question", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
+                    b.Property<long>("TestId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TestId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Questions");
+                });
+
             modelBuilder.Entity("QuestGo.Domain.Entities.Test", b =>
                 {
                     b.Property<long>("Id")
@@ -73,6 +109,8 @@ namespace QuestGo.Data.Migrations
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Tests");
                 });
@@ -116,6 +154,48 @@ namespace QuestGo.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("QuestGo.Domain.Entities.Question", b =>
+                {
+                    b.HasOne("QuestGo.Domain.Entities.Test", "Test")
+                        .WithMany("Questions")
+                        .HasForeignKey("TestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("QuestGo.Domain.Entities.User", "User")
+                        .WithMany("Questions")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Test");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("QuestGo.Domain.Entities.Test", b =>
+                {
+                    b.HasOne("QuestGo.Domain.Entities.User", "User")
+                        .WithMany("Tests")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("QuestGo.Domain.Entities.Test", b =>
+                {
+                    b.Navigation("Questions");
+                });
+
+            modelBuilder.Entity("QuestGo.Domain.Entities.User", b =>
+                {
+                    b.Navigation("Questions");
+
+                    b.Navigation("Tests");
                 });
 #pragma warning restore 612, 618
         }

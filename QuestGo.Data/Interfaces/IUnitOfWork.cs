@@ -7,5 +7,6 @@ public interface IUnitOfWork : IDisposable
     IRepository<User> Users { get; }
     IRepository<Category> Categories { get; }
     IRepository<Test> Tests { get; }
+    IRepository<Question> Questions { get; }
     ValueTask<bool> SaveChangesAsync();
 }

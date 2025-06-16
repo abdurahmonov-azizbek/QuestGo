@@ -22,5 +22,10 @@ public class MapperProfile : Profile
         CreateMap<Test, TestResultDto>();
         CreateMap<TestCreateDto, Test>();
         CreateMap<TestUpdateDto, Test>();
+        
+        // Question
+        CreateMap<Question, QuestionResultDto>();
+        CreateMap<QuestionCreateDto, Question>();
+        CreateMap<QuestionUpdateDto, Question>();
     }
 }

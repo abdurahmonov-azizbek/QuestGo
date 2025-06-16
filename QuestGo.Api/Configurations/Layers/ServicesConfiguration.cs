@@ -12,6 +12,7 @@ public static class ServicesConfiguration
         builder.Services.AddScoped<IAuthService, AuthService>();
         builder.Services.AddScoped<ICategoryService, CategoryService>();
         builder.Services.AddScoped<ITestService, TestService>();
+        builder.Services.AddScoped<IQuestionService, QuestionService>();
         builder.Services.AddAutoMapper(typeof(MapperProfile));
     }
 }
