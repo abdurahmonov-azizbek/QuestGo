@@ -8,5 +8,6 @@ public interface IUnitOfWork : IDisposable
     IRepository<Category> Categories { get; }
     IRepository<Test> Tests { get; }
     IRepository<Question> Questions { get; }
+    IRepository<QuestionOption> QuestionOptions { get; }
     ValueTask<bool> SaveChangesAsync();
 }

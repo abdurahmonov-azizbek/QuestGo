@@ -9,6 +9,7 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
     public DbSet<Category> Categories { get; set; }
     public DbSet<Test> Tests { get; set; }
     public DbSet<Question> Questions { get; set; }
+    public DbSet<QuestionOption> QuestionOptions { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -26,6 +27,11 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
             .HasOne(q => q.User)
             .WithMany(u => u.Questions)
             .HasForeignKey(q => q.UserId);
+
+        modelBuilder.Entity<QuestionOption>()
+            .HasOne(o => o.Question)
+            .WithMany(q => q.Options)
+            .HasForeignKey(o => o.QuestionId);
         
         base.OnModelCreating(modelBuilder);
     }

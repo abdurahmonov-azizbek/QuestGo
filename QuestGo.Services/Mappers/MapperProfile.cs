@@ -27,5 +27,10 @@ public class MapperProfile : Profile
         CreateMap<Question, QuestionResultDto>();
         CreateMap<QuestionCreateDto, Question>();
         CreateMap<QuestionUpdateDto, Question>();
+        
+        // QuestionOption
+        CreateMap<QuestionOption, QuestionOptionResultDto>();
+        CreateMap<QuestionOptionCreateDto, QuestionOption>();
+        CreateMap<QuestionOptionUpdateDto, QuestionOption>();
     }
 }

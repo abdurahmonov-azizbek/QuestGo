@@ -10,6 +10,7 @@ public class UnitOfWork(AppDbContext context) : IUnitOfWork
     public IRepository<Category> Categories => new Repository<Category>(context);
     public IRepository<Test> Tests => new Repository<Test>(context);
     public IRepository<Question> Questions => new Repository<Question>(context);
+    public IRepository<QuestionOption> QuestionOptions => new Repository<QuestionOption>(context);
 
 
     public void Dispose()

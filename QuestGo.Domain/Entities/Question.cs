@@ -9,4 +9,5 @@ public class Question : Auditable
     public virtual Test? Test { get; set; }
     public long UserId { get; set; }
     public virtual User User { get; set; }
+    public virtual ICollection<QuestionOption> Options { get; set; } = new List<QuestionOption>();
 }
