@@ -10,4 +10,5 @@ public class Question : Auditable
     public long UserId { get; set; }
     public virtual User User { get; set; }
     public virtual ICollection<QuestionOption> Options { get; set; } = new List<QuestionOption>();
+    public virtual ICollection<UserAnswer>  UserAnswers { get; set; } = new List<UserAnswer>();
 }

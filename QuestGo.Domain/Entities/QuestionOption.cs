@@ -8,4 +8,6 @@ public class QuestionOption : Auditable
     public long QuestionId { get; set; }
     public bool IsCorrect { get; set; }
     public virtual Question Question { get; set; }
+    public virtual ICollection<UserAnswer> UserAnswers { get; set; } = new List<UserAnswer>();
+
 }

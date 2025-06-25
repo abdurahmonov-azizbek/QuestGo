@@ -9,5 +9,7 @@ public interface IUnitOfWork : IDisposable
     IRepository<Test> Tests { get; }
     IRepository<Question> Questions { get; }
     IRepository<QuestionOption> QuestionOptions { get; }
+    IRepository<UserAnswer> UserAnswers { get; }
+    IRepository<UserTestSession>  UserTestSessions { get; }
     ValueTask<bool> SaveChangesAsync();
 }

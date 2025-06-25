@@ -15,7 +15,7 @@ public class QuestionController(IQuestionService questionService) : BaseControll
         {
             Code = 200,
             Message = "Ok👍🏿",
-            Data = await questionService.GetAllAsync(@params)
+            Data = await questionService.GetAllAsync(@params)   
         });
 
     [HttpPost]

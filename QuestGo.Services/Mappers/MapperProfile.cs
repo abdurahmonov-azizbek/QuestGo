@@ -32,5 +32,14 @@ public class MapperProfile : Profile
         CreateMap<QuestionOption, QuestionOptionResultDto>();
         CreateMap<QuestionOptionCreateDto, QuestionOption>();
         CreateMap<QuestionOptionUpdateDto, QuestionOption>();
+        
+        // User answer
+        CreateMap<UserAnswer, UserAnswerResultDto>();
+        CreateMap<UserAnswerCreateDto, UserAnswer>();
+        CreateMap<UserAnswerUpdateDto, UserAnswer>();
+        
+        // User Test Session
+        CreateMap<UserTestSessionCreateDto, UserTestSession>();
+        CreateMap<UserTestSession, UserTestSessionResultDto>();
     }
 }

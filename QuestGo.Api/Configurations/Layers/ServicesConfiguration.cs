@@ -14,5 +14,8 @@ public static class ServicesConfiguration
         builder.Services.AddScoped<ITestService, TestService>();
         builder.Services.AddScoped<IQuestionService, QuestionService>();
         builder.Services.AddAutoMapper(typeof(MapperProfile));
+        builder.Services.AddScoped<IUserAnswerService, UserAnswerService>();
+        builder.Services.AddScoped<IQuestionOptionService, QuestionOptionService>();
+        builder.Services.AddScoped<IUserTestSessionService, UserTestSessionService>();
     }
 }

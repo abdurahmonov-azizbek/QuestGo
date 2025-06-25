@@ -11,6 +11,8 @@ public class UnitOfWork(AppDbContext context) : IUnitOfWork
     public IRepository<Test> Tests => new Repository<Test>(context);
     public IRepository<Question> Questions => new Repository<Question>(context);
     public IRepository<QuestionOption> QuestionOptions => new Repository<QuestionOption>(context);
+    public IRepository<UserAnswer> UserAnswers => new Repository<UserAnswer>(context);
+    public IRepository<UserTestSession> UserTestSessions => new Repository<UserTestSession>(context);
 
 
     public void Dispose()
